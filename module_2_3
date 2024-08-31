@@ -1,8 +1,11 @@
 list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
 i = 0;
-while (i < len(list)):
-    if list[i] >= 0:
+while i < len(list): # Проверка на конечность числа повторений цикла пока количество элементов списка больше i
+    if list[i] > 0:
         print(list[i]);
         i = i + 1
+    elif list[i] == 0:
+        i = i + 1
+        continue
     else:
         break
