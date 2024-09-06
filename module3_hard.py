@@ -5,12 +5,6 @@ data_structure = [
   "Hello",
   ((), [{(2, 'Urban', ('Urban2', 35))}])
 ]
-# [1, 2, 3]                                <class 'list'>
-# {'a': 4, 'b': 5}                         <class 'dict'>
-# (6, {'cube': 7, 'drum': 8})              <class 'tuple'>
-# Hello                                    <class 'str'>
-# ((), [{(2, 'Urban', ('Urban2', 35))}])   <class 'tuple'>
-
 def sum_data_structure(*args):
     elem_sum = 0
     for elem in args:
