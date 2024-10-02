@@ -19,39 +19,19 @@ class Vehicle:
         print('Цвет: ', self.__color)
 
     def print_info(self):
-        print('Модель: ', self.__model)
-        print('Мощность: ', self.__engine_power)
-        print('Цвет: ', self.__color)
+        Vehicle.get_model(self)
+        Vehicle.get_horsepower(self)
+        Vehicle.get_color(self)
         print('Владелец: ', self.owner)
+
 
     def set_color(self, new_color: str):
         self.new_color = new_color
         self.change = True
-        for color in Vehicle.__COLOR_VARIANTS:
-            if color.lower() == new_color.lower():
+        for color in self.__COLOR_VARIANTS:
+            if new_color.lower() == color.lower():
                 self.__color = new_color
                 self.change = False
 
         if self.change:
             print('Нельзя сменить цвет на', self.new_color)
-
-
-class Sedan(Vehicle):
-    __PASSENGERS_LIMIT = 5
-
-
-
-# Текущие цвета __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
-vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
-
-# Изначальные свойства
-vehicle1.get_model()
-vehicle1.get_color()
-vehicle1.set_color('green')
-vehicle1.get_color()
-vehicle1.set_color('orange')
-vehicle1.get_color()
-
-
-
-
