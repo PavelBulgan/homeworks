@@ -10,13 +10,8 @@ class WordsFinder:
                 text = file.read().lower()
                 for sumbol in ',.=!?;:-':
                     text = text.replace(sumbol, '')
-                #print(text)
                 text = text.replace('\n', ' ')
-                #print(text)
                 text = text.split(' ')
-                #print(text)
-                #text.index('english')
-                #text.count('english')
             all_words[file_name] = text
         return all_words
 
@@ -45,10 +40,6 @@ class WordsFinder:
                     score += 1
             result[name] = score
         return result
-
-    def count2(self, word):
-        self.word = word.lower()
-        all_words = self.get_all_words()
 
 
 
